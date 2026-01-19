@@ -1,9 +1,12 @@
 import React from 'react'
+import Navbar from './Navebar'
 
-function hader() {
+function Header() {
   return (
-    <div>hader</div>
+    <div>
+      <Navbar />
+    </div>
   )
 }
 
-export default hader
+export default Header

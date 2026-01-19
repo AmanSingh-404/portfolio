@@ -1,12 +1,12 @@
 import React from 'react'
-import Header from './components/Header'
+import HomePage from './components/HomePage'
 
 
 function App() {
   return (
     <div>
-      <h1>Start Building Portfolio</h1>
-      <Header/>
+
+      <HomePage />
     </div>
   )
 }
