@@ -4,3 +4,9 @@
     --font-sans: "Inter", sans-serif;
     --font-heading: "Outfit", sans-serif;
 }
+
+@layer base {
+    body {
+        @apply antialiased bg-slate-50 text-slate-900;
+    }
+}

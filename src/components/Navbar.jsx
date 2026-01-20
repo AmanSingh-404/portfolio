@@ -13,16 +13,13 @@ const Navbar = () => {
 
   return (
     // Removed max-width from the outer container to ensure it covers the full page width
-    <nav className="w-full bg-white border-b border-gray-100 sticky top-0 z-50">
-      {/* Change: 'px-10' or 'px-[5%]' gives it a wider feel than the standard 'max-w-7xl'. 
-         If you want it strictly edge-to-edge with no padding, remove 'px-4'.
-      */}
-      <div className="w-full px-4 sm:px-8 lg:px-12">
+    <nav className="w-full bg-white/80 backdrop-blur-md border-b border-gray-100 sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="flex justify-between h-20 items-center">
 
           {/* Logo Section */}
           <div className="flex-shrink-0 flex items-center">
-            <span className="text-2xl font-black text-indigo-600 tracking-tight uppercase">
+            <span className="text-2xl font-black text-indigo-600 tracking-tight uppercase font-heading">
               AMAN SINGH
             </span>
           </div>
@@ -33,13 +30,13 @@ const Navbar = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-gray-500 hover:text-indigo-600 text-sm font-semibold transition-all"
+                className="text-slate-600 hover:text-indigo-600 text-sm font-bold transition-all"
               >
                 {link.name}
               </a>
             ))}
-            {/* Resume button as seen in the inspiration resources */}
-            <button className="bg-indigo-600 text-white px-8 py-2.5 rounded-lg text-sm font-bold hover:bg-indigo-700 shadow-md transition-all active:scale-95">
+            {/* Resume button */}
+            <button className="bg-indigo-600 text-white px-8 py-2.5 rounded-lg text-sm font-bold hover:bg-indigo-700 shadow-md shadow-indigo-200 transition-all active:scale-95">
               Resume
             </button>
           </div>
