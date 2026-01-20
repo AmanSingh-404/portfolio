@@ -1,16 +1,11 @@
 import React from 'react';
 import Footer from './Footer';
 import ContactSection from './ContactSection';
-import Navbar from './Navebar';
+import Navbar from './Navbar';
 import ProjectsPage from './ProjectsPage';
+import AboutPage from './AboutPage';
 
 const HomePage = () => {
-
-    // Tech stack from inspiration docs
-    const coreTech = [
-        "TypeScript", "React", "Node.js", "Kubernetes",
-        "AWS", "Python", "PostgreSQL", "GraphQL"
-    ];
 
     return (
         <div className="min-h-screen bg-white font-sans text-gray-900">
@@ -43,22 +38,7 @@ const HomePage = () => {
                 </div>
             </section>
 
-            {/* --- TECH STACK SECTION --- */}
-            <section className="w-full py-20 bg-gray-50 border-y border-gray-100">
-                <div className="max-w-7xl mx-auto px-6 md:px-12">
-                    <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-black text-gray-900">My Core Technologies</h2>
-                        <p className="text-gray-500 mt-4 text-lg">A diverse skill set covering modern web development and cloud infrastructure.</p>
-                    </div>
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-                        {coreTech.map((tech) => (
-                            <div key={tech} className="bg-white p-6 rounded-2xl border border-gray-200 text-center font-bold text-gray-700 shadow-sm hover:border-indigo-500 hover:text-indigo-600 transition-all cursor-default">
-                                {tech}
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
+            <AboutPage />
 
             <ProjectsPage />
             <ContactSection />
