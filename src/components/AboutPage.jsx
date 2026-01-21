@@ -43,7 +43,7 @@ const AboutPage = () => {
                 <div className="flex flex-col md:flex-row gap-12 items-start">
                     <div className="flex-1 space-y-6">
                         <h1 className="text-6xl font-black text-slate-900 tracking-tighter uppercase font-heading">
-                            Alex Johnson // <span className="text-indigo-600">About Me</span>
+                            Aman Singh - <span className="text-indigo-600">About Me</span>
                         </h1>
                         <p className="text-2xl font-bold text-slate-700 font-heading">
                             Senior Software Engineer specializing in Full-Stack Development [cite: 138]
