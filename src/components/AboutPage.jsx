@@ -39,7 +39,7 @@ const AboutPage = () => {
     return (
         <div className="min-h-screen bg-white font-sans">
             {/* Introduction Header */}
-            <section className="pt-24 pb-16 px-6 md:px-12 max-w-7xl mx-auto">
+            <section className="pt-24 pb-16 px-6 md:px-12 w-full px-8 md:px-16 lg:px-24">
                 <div className="flex flex-col md:flex-row gap-12 items-start">
                     <div className="flex-1 space-y-6">
                         <h1 className="text-6xl font-black text-slate-900 tracking-tighter uppercase font-heading">
@@ -53,10 +53,15 @@ const AboutPage = () => {
                             high-performance web applications[cite: 139, 140]. Known for clean code and a
                             collaborative spirit[cite: 141].
                         </p>
-                        <button className="bg-slate-900 text-white px-8 py-4 rounded-xl font-bold hover:bg-indigo-600 transition-all flex items-center gap-2">
-                            Download CV [cite: 142]
+                        <a
+                            href="/resume.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="bg-slate-900 text-white px-8 py-4 rounded-xl font-bold hover:bg-indigo-600 transition-all flex items-center gap-2 w-fit"
+                        >
+                            Download CV
                             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a2 2 0 002 2h12a2 2 0 002-2v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
-                        </button>
+                        </a>
                     </div>
                 </div>
             </section>

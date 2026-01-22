@@ -36,7 +36,7 @@ const ProjectsPage = () => {
         <div className="min-h-screen bg-white">
             {/* Header Section */}
             <section className="pt-24 pb-16 px-6 md:px-12 border-b border-slate-100">
-                <div className="max-w-7xl mx-auto">
+                <div className="w-full px-8 md:px-16 lg:px-24">
                     <h1 className="text-6xl font-black text-slate-900 mb-6 tracking-tighter font-heading">
                         My Projects & <br />
                         <span className="text-indigo-600">Case Studies.</span>

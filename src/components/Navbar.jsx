@@ -14,7 +14,7 @@ const Navbar = () => {
   return (
     // Removed max-width from the outer container to ensure it covers the full page width
     <nav className="w-full bg-white/80 backdrop-blur-md border-b border-gray-100 sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
+      <div className="w-full px-6 md:px-12">
         <div className="flex justify-between h-20 items-center">
 
           {/* Logo Section */}

@@ -3,7 +3,7 @@ import React from 'react';
 const ContactSection = () => {
     return (
         <section id="contact" className="w-full py-24 bg-white px-6 md:px-12">
-            <div className="max-w-7xl mx-auto">
+            <div className="w-full px-8 md:px-16 lg:px-24">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
 
                     {/* Left Side: Text & Info */}
