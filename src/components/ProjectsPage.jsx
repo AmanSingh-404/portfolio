@@ -35,13 +35,18 @@ const ProjectsPage = () => {
     return (
         <div className="min-h-screen bg-white">
             {/* Header Section */}
-            <section className="pt-24 pb-16 px-6 md:px-12 border-b border-slate-100">
-                <div className="w-full px-8 md:px-16 lg:px-24">
-                    <h1 className="text-6xl font-black text-slate-900 mb-6 tracking-tighter font-heading">
+            <section className="pt-24 pb-16 px-6 md:px-12 border-b border-slate-200/50 bg-slate-50 relative overflow-hidden">
+                {/* Modern Grid Background */}
+                <div className="absolute inset-0 w-full h-full bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]">
+                    <div className="absolute inset-0 bg-slate-50 [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,transparent_70%,#f8fafc_100%)]"></div>
+                </div>
+
+                <div className="w-full px-8 md:px-16 lg:px-24 relative z-10 max-w-7xl mx-auto">
+                    <h1 className="text-6xl md:text-7xl font-black text-slate-900 mb-6 tracking-tighter font-heading">
                         My Projects & <br />
-                        <span className="text-indigo-600">Case Studies.</span>
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-violet-600">Case Studies.</span>
                     </h1>
-                    <p className="text-xl text-slate-500 max-w-2xl leading-relaxed font-medium">
+                    <p className="text-xl text-slate-600 max-w-2xl leading-relaxed font-medium">
                         A showcase of my passion for software development, featuring a range of
                         projects from web applications to data platforms.
                     </p>

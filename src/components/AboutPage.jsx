@@ -39,25 +39,30 @@ const AboutPage = () => {
     return (
         <div className="min-h-screen bg-white font-sans">
             {/* Introduction Header */}
-            <section className="pt-24 pb-16 px-6 md:px-12 w-full px-8 md:px-16 lg:px-24">
-                <div className="flex flex-col md:flex-row gap-12 items-start">
-                    <div className="flex-1 space-y-6">
-                        <h1 className="text-6xl font-black text-slate-900 tracking-tighter uppercase font-heading">
-                            Aman Singh - <span className="text-indigo-600">About Me</span>
+            <section id="about" className="pt-24 pb-16 px-6 md:px-12 w-full px-8 md:px-16 lg:px-24 bg-slate-50 relative overflow-hidden">
+                {/* Modern Grid Background */}
+                <div className="absolute inset-0 w-full h-full bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]">
+                    <div className="absolute inset-0 bg-slate-50 [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,transparent_70%,#f8fafc_100%)]"></div>
+                </div>
+
+                <div className="flex flex-col md:flex-row gap-12 items-start relative z-10 max-w-7xl mx-auto">
+                    <div className="flex-1 space-y-8">
+                        <h1 className="text-6xl md:text-7xl font-black text-slate-900 tracking-tighter uppercase font-heading">
+                            About <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-violet-600">Me.</span>
                         </h1>
-                        <p className="text-2xl font-bold text-slate-700 font-heading">
-                            Senior Software Engineer specializing in Full-Stack Development [cite: 138]
+                        <p className="text-3xl font-bold text-slate-700 font-heading tracking-tight">
+                            Senior Software Engineer specializing in <span className="text-indigo-600 decoration-4 decoration-indigo-200 underline underline-offset-4">Full-Stack Development</span>
                         </p>
-                        <p className="text-xl text-slate-500 leading-relaxed max-w-3xl">
+                        <p className="text-xl text-slate-600 leading-relaxed max-w-3xl">
                             Results-driven engineer with over 8 years of experience building scalable,
-                            high-performance web applications[cite: 139, 140]. Known for clean code and a
-                            collaborative spirit[cite: 141].
+                            high-performance web applications. Known for clean code and a
+                            collaborative spirit.
                         </p>
                         <a
                             href="/resume.pdf"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="bg-slate-900 text-white px-8 py-4 rounded-xl font-bold hover:bg-indigo-600 transition-all flex items-center gap-2 w-fit"
+                            className="bg-slate-900 text-white px-8 py-4 rounded-xl font-bold hover:bg-indigo-600 hover:-translate-y-1 transition-all flex items-center gap-2 w-fit shadow-xl"
                         >
                             Download CV
                             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a2 2 0 002 2h12a2 2 0 002-2v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
