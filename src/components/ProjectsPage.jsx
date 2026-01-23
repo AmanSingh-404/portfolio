@@ -4,29 +4,29 @@ const ProjectsPage = () => {
     const allProjects = [
         {
             id: "01",
-            title: "Enterprise Dashboard",
-            description: "Developed a comprehensive enterprise dashboard with real-time data visualization, user management, and reporting features.",
-            tech: ["React", "Node.js", "PostgreSQL", "Tailwind CSS", "Redux"],
+            title: "AI Agent Builder",
+            description: "Developed a comprehensive AI Agent Builder with real-time data visualization, user management, and reporting features.",
+            tech: ["React", "Node.js", "Convex", "Tailwind CSS", "Redux"],
             impact: "Focused on clean code and robust architecture."
         },
         {
             id: "02",
-            title: "Microservices API Gateway",
-            description: "Developed an API Gateway using Go and Kubernetes to manage traffic, authentication, and load balancing for a suite of microservices.",
-            tech: ["Go", "gRPC", "Kubernetes", "Docker", "GCP"],
+            title: "AI Mock Interview",
+            description: "Developed an AI Mock Interview using Go and Kubernetes to manage traffic, authentication, and load balancing for a suite of microservices.",
+            tech: ["React", "Node.js", "Convex", "Tailwind CSS"],
             impact: "Enhanced system resilience and performance."
         },
         {
             id: "03",
-            title: "AI-Powered Recommender",
-            description: "Designed and implemented a machine learning-based recommendation engine. The system analyzes data to provide personalized content.",
+            title: "AI Chatbot",
+            description: "Designed and implemented a AI Chatbot using machine learning-based recommendation engine. The system analyzes data to provide personalized content.",
             tech: ["Python", "TensorFlow", "Sci-kit Learn", "Pandas", "Flask"],
             impact: "Used advanced data processing pipelines."
         },
         {
             id: "04",
-            title: "Data Analytics Platform",
-            description: "Built a platform for ingesting, processing, and visualizing large datasets. Features custom ETL pipelines and interactive dashboards.",
+            title: "AI Resume Parser",
+            description: "Built a AI Resume Parser for ingesting, processing, and visualizing large datasets. Features custom ETL pipelines and interactive dashboards.",
             tech: ["Apache Kafka", "Spark", "AWS S3", "Python", "Tableau"],
             impact: "Scalable data ingestion architecture."
         }
@@ -100,7 +100,7 @@ const ProjectsPage = () => {
 
                                 <div className="flex gap-6 pt-4">
                                     <button className="bg-indigo-600 text-white px-8 py-3 rounded-xl font-bold hover:bg-indigo-700 shadow-lg shadow-indigo-100 transition-all">
-                                        View Case Study
+                                        Live View
                                     </button>
                                     <button className="flex items-center gap-2 text-slate-900 font-bold hover:text-indigo-600 transition-colors">
                                         GitHub Repo <span>→</span>
