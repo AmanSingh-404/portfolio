@@ -5,7 +5,7 @@ const AboutPage = () => {
     const skillCategories = [
         {
             title: "Programming Languages",
-            skills: ["TypeScript", "Go", "Java", "Python"] // [cite: 133, 134, 135, 136, 146]
+            skills: ["TypeScript", "JavaScript", "C++", "C", "Python"] // [cite: 133, 134, 135, 136, 146]
         },
         {
             title: "Frameworks & Libraries",
@@ -13,7 +13,7 @@ const AboutPage = () => {
         },
         {
             title: "Databases & Tools",
-            skills: ["PostgreSQL", "MongoDB", "Redis", "Elasticsearch", "GraphQL"] // [cite: 145, 148, 149, 151, 152, 165]
+            skills: ["PostgreSQL", "MongoDB", "Redis", "GraphQL"] // [cite: 145, 148, 149, 151, 152, 165]
         },
         {
             title: "Cloud & DevOps",
@@ -54,9 +54,9 @@ const AboutPage = () => {
                             Senior Software Engineer specializing in <span className="text-indigo-600 decoration-4 decoration-indigo-200 underline underline-offset-4">Full-Stack Development</span>
                         </p>
                         <p className="text-xl text-slate-600 leading-relaxed max-w-3xl">
-                            Results-driven engineer with over 8 years of experience building scalable,
-                            high-performance web applications. Known for clean code and a
-                            collaborative spirit.
+                            Hi, I’m Aman Singh, a passionate Full Stack Developer who loves building modern, fast, and user-friendly web applications.
+I enjoy solving real-world problems using React, Node.js, and MongoDB, and I’m also improving my skills in DSA and Machine Learning.
+I’m always excited to learn new technologies and build impactful projects.
                         </p>
                         <a
                             href="/resume.pdf"
@@ -100,22 +100,18 @@ const AboutPage = () => {
                         <h2 className="text-xl font-black uppercase tracking-widest mb-10 text-indigo-400 font-heading">Education [cite: 178]</h2>
                         <div className="space-y-8">
                             <div>
-                                <h4 className="text-xl font-bold font-heading">M.S. in Computer Science [cite: 179]</h4>
-                                <p className="text-slate-400">University of Technology [cite: 180]</p>
-                                <p className="text-sm mt-2 text-indigo-300">Thesis: Optimizing Container Orchestration [cite: 183]</p>
-                            </div>
-                            <div>
-                                <h4 className="text-xl font-bold font-heading">B.S. in Software Engineering [cite: 184]</h4>
-                                <p className="text-slate-400">State University [cite: 185]</p>
+                                <h4 className="text-xl font-bold font-heading">B.Tech Computer Science & Engineering</h4>
+                                <p className="text-slate-400">Lloyd Institute of Engineering & Technology</p>
+                                <p className="text-sm mt-2 text-indigo-300">2023 – 2027</p>
                             </div>
                         </div>
                     </div>
                     <div>
                         <h2 className="text-xl font-black uppercase tracking-widest mb-10 text-indigo-400 font-heading">Certifications [cite: 190]</h2>
                         <ul className="space-y-6">
-                            <li className="border-b border-slate-800 pb-4">Certified AWS Solutions Architect [cite: 189]</li>
-                            <li className="border-b border-slate-800 pb-4">Google Cloud Professional Developer [cite: 189]</li>
-                            <li className="border-b border-slate-800 pb-4">Outstanding Contributor Award [cite: 189]</li>
+                            <li className="border-b border-slate-800 pb-4">Oracle OCI AI Foundations (2025)</li>
+                            <li className="border-b border-slate-800 pb-4">Google GenAI Studio (2025)</li>
+                            <li className="border-b border-slate-800 pb-4">BNB Chain Hackathon Participant</li>
                         </ul>
                     </div>
                 </div>
