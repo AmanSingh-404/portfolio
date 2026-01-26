@@ -80,7 +80,13 @@ const ContactSection = () => {
                                 <textarea rows="4" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-indigo-600 focus:ring-4 focus:ring-indigo-500/10 outline-none transition-all bg-white" placeholder="Your message here..."></textarea>
                             </div>
 
-                            <button type="submit" className="w-full bg-slate-900 text-white py-4 rounded-xl font-bold text-lg hover:bg-indigo-600 shadow-lg shadow-slate-200 hover:shadow-indigo-200 transition-all transform hover:-translate-y-1 active:scale-[0.98]">
+                            <button
+                                type="submit"
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    alert("Thank you! This is a demo form.");
+                                }}
+                                className="w-full bg-slate-900 text-white py-4 rounded-xl font-bold text-lg hover:bg-indigo-600 shadow-lg shadow-slate-200 hover:shadow-indigo-200 transition-all transform hover:-translate-y-1 active:scale-[0.98]">
                                 Send Message
                             </button>
                         </form>

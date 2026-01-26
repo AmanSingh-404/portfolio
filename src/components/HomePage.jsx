@@ -46,13 +46,13 @@ const HomePage = () => {
                     </p>
 
                     <div className="flex flex-wrap gap-6 justify-center pt-8">
-                        <button className="bg-indigo-600 text-white px-10 py-5 rounded-2xl font-bold text-lg hover:bg-indigo-700 hover:-translate-y-1 hover:shadow-2xl hover:shadow-indigo-200 transition-all duration-300 flex items-center gap-2 group">
+                        <a href="#projects" className="bg-indigo-600 text-white px-10 py-5 rounded-2xl font-bold text-lg hover:bg-indigo-700 hover:-translate-y-1 hover:shadow-2xl hover:shadow-indigo-200 transition-all duration-300 flex items-center gap-2 group">
                             View My Work
                             <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-                        </button>
-                        <button className="bg-white text-slate-700 border-2 border-slate-200 px-10 py-5 rounded-2xl font-bold text-lg hover:border-indigo-600 hover:text-indigo-600 hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
+                        </a>
+                        <a href="#contact" className="bg-white text-slate-700 border-2 border-slate-200 px-10 py-5 rounded-2xl font-bold text-lg hover:border-indigo-600 hover:text-indigo-600 hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
                             Get In Touch
-                        </button>
+                        </a>
                     </div>
 
                     {/* Scroll Indicator */}

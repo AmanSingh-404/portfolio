@@ -7,35 +7,43 @@ const ProjectsPage = () => {
             title: "AI Agent Builder",
             description: "Developed a comprehensive AI Agent Builder with real-time data visualization, user management, and reporting features.",
             tech: ["React", "Node.js", "Convex", "Tailwind CSS", "Redux"],
-            impact: "Focused on clean code and robust architecture."
+            impact: "Focused on clean code and robust architecture.",
+            liveLink: "#",
+            repoLink: "#"
         },
         {
             id: "02",
             title: "AI Mock Interview",
             description: "Developed an AI Mock Interview using Go and Kubernetes to manage traffic, authentication, and load balancing for a suite of microservices.",
             tech: ["React", "Node.js", "Convex", "Tailwind CSS"],
-            impact: "Enhanced system resilience and performance."
+            impact: "Enhanced system resilience and performance.",
+            liveLink: "#",
+            repoLink: "#"
         },
         {
             id: "03",
             title: "AI Chatbot",
             description: "Designed and implemented a AI Chatbot using machine learning-based recommendation engine. The system analyzes data to provide personalized content.",
             tech: ["Python", "TensorFlow", "Sci-kit Learn", "Pandas", "Flask"],
-            impact: "Used advanced data processing pipelines."
+            impact: "Used advanced data processing pipelines.",
+            liveLink: "#",
+            repoLink: "#"
         },
         {
             id: "04",
             title: "AI Resume Parser",
             description: "Built a AI Resume Parser for ingesting, processing, and visualizing large datasets. Features custom ETL pipelines and interactive dashboards.",
             tech: ["Apache Kafka", "Spark", "AWS S3", "Python", "Tableau"],
-            impact: "Scalable data ingestion architecture."
+            impact: "Scalable data ingestion architecture.",
+            liveLink: "#",
+            repoLink: "#"
         }
     ];
 
     return (
         <div className="min-h-screen bg-white">
             {/* Header Section */}
-            <section className="pt-24 pb-16 px-6 md:px-12 border-b border-slate-200/50 bg-slate-50 relative overflow-hidden">
+            <section id="projects" className="pt-24 pb-16 px-6 md:px-12 border-b border-slate-200/50 bg-slate-50 relative overflow-hidden">
                 {/* Modern Grid Background */}
                 <div className="absolute inset-0 w-full h-full bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]">
                     <div className="absolute inset-0 bg-slate-50 [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,transparent_70%,#f8fafc_100%)]"></div>
@@ -99,12 +107,12 @@ const ProjectsPage = () => {
                                 </div>
 
                                 <div className="flex gap-6 pt-4">
-                                    <button className="bg-indigo-600 text-white px-8 py-3 rounded-xl font-bold hover:bg-indigo-700 shadow-lg shadow-indigo-100 transition-all">
+                                    <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="bg-indigo-600 text-white px-8 py-3 rounded-xl font-bold hover:bg-indigo-700 shadow-lg shadow-indigo-100 transition-all inline-block text-center">
                                         Live View
-                                    </button>
-                                    <button className="flex items-center gap-2 text-slate-900 font-bold hover:text-indigo-600 transition-colors">
+                                    </a>
+                                    <a href={project.repoLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-slate-900 font-bold hover:text-indigo-600 transition-colors cursor-pointer">
                                         GitHub Repo <span>→</span>
-                                    </button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -118,9 +126,9 @@ const ProjectsPage = () => {
                 <p className="text-indigo-100 text-xl mb-10 max-w-xl mx-auto">
                     I'm always open to new opportunities and exciting technical challenges.
                 </p>
-                <button className="bg-white text-indigo-600 px-12 py-4 rounded-2xl font-black text-lg hover:bg-gray-100 transition-all font-heading">
+                <a href="#contact" className="bg-white text-indigo-600 px-12 py-4 rounded-2xl font-black text-lg hover:bg-gray-100 transition-all font-heading inline-block">
                     Let's Talk
-                </button>
+                </a>
             </section>
         </div>
     );
