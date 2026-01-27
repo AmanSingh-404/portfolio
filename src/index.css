@@ -3,10 +3,50 @@
 @theme {
     --font-sans: "Inter", sans-serif;
     --font-heading: "Outfit", sans-serif;
+    --color-primary: #f8fafc;
+    /* Slate 50 */
+    --color-accent: #22d3ee;
+    /* Cyan 400 */
+    --color-bg-gradient-start: #a3bfd9;
+    --color-bg-gradient-end: #7da0c0;
 }
 
 @layer base {
     body {
-        @apply antialiased bg-slate-50 text-slate-900;
+        @apply antialiased text-slate-900 font-sans;
+        background: linear-gradient(135deg, #a8c0d8 0%, #8caec9 100%);
+        min-height: 100vh;
+        color: #1e293b;
+    }
+}
+
+@theme {
+    --animate-fade-in-up: fade-in-up 0.8s ease-out forwards;
+    --animate-gradient-x: gradient-x 3s ease infinite;
+
+    @keyframes fade-in-up {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes gradient-x {
+
+        0%,
+        100% {
+            background-size: 200% 200%;
+            background-position: left center;
+        }
+
+        50% {
+            background-size: 200% 200%;
+            background-position: right center;
+        }
     }
 }

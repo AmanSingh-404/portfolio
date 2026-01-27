@@ -2,79 +2,30 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-white border-t border-slate-200/60 pt-20 pb-10">
-      <div className="w-full px-6 md:px-12 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+    <footer className="w-full bg-white border-t border-slate-100 py-12">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-center gap-6">
 
-          {/* Brand Column */}
-          <div className="col-span-1 md:col-span-1">
-            <div className="flex items-center gap-2 mb-6">
-              <span className="text-2xl font-black text-slate-900 tracking-tighter uppercase font-heading">
-                AMAN<span className="text-indigo-600">SINGH</span>
-              </span>
-            </div>
-            <p className="text-slate-500 leading-relaxed font-medium text-sm">
-              Showcasing passion, projects, and expertise in software engineering. Building the future, one line of code at a time.
-            </p>
-          </div>
-
-          {/* Quick Links Column */}
-          <div>
-            <h4 className="text-sm font-black text-slate-900 uppercase tracking-widest mb-6 font-heading">Quick Links</h4>
-            <ul className="space-y-4">
-              {['Home', 'About', 'Projects', 'Contact'].map((item) => (
-                <li key={item}>
-                  <a href={`#${item.toLowerCase()}`} className="text-slate-500 hover:text-indigo-600 font-bold text-sm transition-colors">
-                    {item}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Resources Column */}
-          <div>
-            <h4 className="text-sm font-black text-slate-900 uppercase tracking-widest mb-6 font-heading">Resources</h4>
-            <ul className="space-y-4">
-              <li>
-                <a href="#" className="text-slate-500 hover:text-indigo-600 font-bold text-sm transition-colors">Blog</a>
-              </li>
-              <li>
-                <a href="#" className="text-slate-500 hover:text-indigo-600 font-bold text-sm transition-colors underline decoration-2 decoration-indigo-200 underline-offset-4">Resume</a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Connect Column */}
-          <div>
-            <h4 className="text-sm font-black text-slate-900 uppercase tracking-widest mb-6 font-heading">Connect</h4>
-            <ul className="space-y-4">
-              <li>
-                <a href="mailto:john.doe@devfolio.com" className="text-slate-500 hover:text-indigo-600 font-bold text-sm transition-colors">Email</a>
-              </li>
-              <li>
-                <a href="#" className="text-slate-500 hover:text-indigo-600 font-bold text-sm transition-colors">LinkedIn</a>
-              </li>
-              <li>
-                <a href="#" className="text-slate-500 hover:text-indigo-600 font-bold text-sm transition-colors">GitHub</a>
-              </li>
-              <li>
-                <a href="#" className="text-slate-500 hover:text-indigo-600 font-bold text-sm transition-colors">X / Twitter</a>
-              </li>
-            </ul>
-          </div>
+        <div className="flex flex-col items-center md:items-start">
+          <span className="text-xl font-black text-slate-900 tracking-tighter uppercase font-heading select-none">
+            AMAN SINGH
+          </span>
+          <p className="text-slate-400 text-xs font-bold uppercase tracking-widest mt-2">
+            © 2026. All Rights Reserved.
+          </p>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="pt-8 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-slate-400 text-sm font-bold">
-            © 2026 Aman Singh. All rights reserved.
-          </p>
-          <div className="flex items-center gap-2 text-sm text-slate-400 font-bold">
-            <span>Made with</span>
-            <span className="text-indigo-500 animate-pulse">❤</span>
-            <span>for the web</span>
-          </div>
+        <div className="flex gap-8">
+          {['Home', 'Projects', 'About', 'Contact'].map(link => (
+            <a key={link} href={`#${link.toLowerCase()}`} className="text-sm font-bold text-slate-500 hover:text-cyan-600 transition-colors uppercase tracking-wide">
+              {link}
+            </a>
+          ))}
+        </div>
+
+        <div className="flex gap-4">
+          {/* Social Icons (Simplified) */}
+          <a href="#" className="text-slate-400 hover:text-slate-900 transition-colors"><span className="sr-only">K</span><svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg></a>
+          <a href="#" className="text-slate-400 hover:text-slate-900 transition-colors"><span className="sr-only">L</span><svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fillRule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clipRule="evenodd"></path></svg></a>
         </div>
       </div>
     </footer>

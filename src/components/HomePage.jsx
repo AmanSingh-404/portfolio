@@ -9,64 +9,85 @@ import AboutPage from './AboutPage';
 const HomePage = () => {
 
     return (
-        <div className="min-h-screen bg-white font-sans text-gray-900">
-
+        <div className="min-h-screen font-sans text-gray-900">
             <Navbar />
-            <section id="home" className="w-full min-h-[90vh] py-28 px-6 flex flex-col items-center justify-center text-center relative overflow-hidden bg-slate-50">
-                {/* Modern Grid Background */}
-                <div className="absolute inset-0 w-full h-full bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]">
-                    <div className="absolute inset-0 bg-white [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,transparent_70%,#fff_100%)]"></div>
+
+            {/* HERO SECTION */}
+            <section id="home" className="relative h-screen w-full overflow-hidden flex items-center justify-center bg-linear-to-br from-bg-gradient-start to-bg-gradient-end">
+
+                {/* Large Background Text */}
+                <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none z-0">
+                    <h1 className="text-[20vw] leading-none font-black text-white/10 tracking-tighter scale-y-125 font-heading">
+                        ENGINEER
+                    </h1>
                 </div>
 
-                {/* Ambient Glows */}
-                <div className="absolute top-0 transform -translate-x-1/2 left-1/2 w-[800px] h-[500px] bg-indigo-200/30 rounded-[100%] blur-[100px] pointer-events-none animate-pulse"></div>
+                {/* Central Image - Cartoon Character */}
+                <div className="relative z-10 mt-20 md:mt-0 animate-fade-in-up delay-300">
+                    <div className="w-[300px] md:w-[450px] h-[400px] md:h-[600px] flex items-end justify-center relative">
+                        {/* Blob Background behind character */}
+                        <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-[#1a2e3b]/20 to-transparent rounded-full blur-2xl transform scale-x-150"></div>
 
-                <div className="relative z-10 max-w-5xl mx-auto space-y-10 animate-fade-in-up">
-
-                    {/* Status Badge */}
-                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-200 shadow-sm mb-4 hover:border-indigo-200 transition-colors cursor-default">
-                        <span className="relative flex h-3 w-3">
-                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                            <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
-                        </span>
-                        <span className="text-sm font-semibold text-slate-600">Available for Freelance & Hires</span>
+                        <img
+                            src="https://api.dicebear.com/9.x/avataaars/svg?seed=Felix&backgroundColor=transparent&clothing=hoodie&clothingColor=3c4f76&skinColor=edb98a&top=shortHair&accessories=sunglasses&accessoriesColor=262e33&style=circle"
+                            alt="Character"
+                            className="w-full h-full object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500"
+                        />
                     </div>
+                </div>
 
-                    <h1 className="text-7xl md:text-9xl font-black tracking-tight font-heading mb-4 leading-tight">
-                        <span className="text-slate-900">Aman</span> <br className="md:hidden" />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-violet-600 to-purple-600 animate-gradient-x">Singh</span>
-                    </h1>
-
-                    <p className="text-2xl md:text-4xl font-medium text-slate-600 tracking-wide max-w-3xl mx-auto">
-                        Building <span className="text-indigo-600 font-bold decoration-indigo-200 underline decoration-4 underline-offset-4">digital experiences</span> that matter.
-                    </p>
-
-                    <p className="text-xl text-slate-500 max-w-2xl mx-auto leading-relaxed">
-                        Full Stack Developer & AI Engineer focused on creating performant, scalable, and beautiful web applications.
-                    </p>
-
-                    <div className="flex flex-wrap gap-6 justify-center pt-8">
-                        <a href="#projects" className="bg-indigo-600 text-white px-10 py-5 rounded-2xl font-bold text-lg hover:bg-indigo-700 hover:-translate-y-1 hover:shadow-2xl hover:shadow-indigo-200 transition-all duration-300 flex items-center gap-2 group">
-                            View My Work
-                            <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-                        </a>
-                        <a href="#contact" className="bg-white text-slate-700 border-2 border-slate-200 px-10 py-5 rounded-2xl font-bold text-lg hover:border-indigo-600 hover:text-indigo-600 hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
-                            Get In Touch
-                        </a>
+                {/* Bottom Left - Status */}
+                <div className="absolute bottom-8 left-8 md:bottom-12 md:left-12 flex items-center gap-3 z-20">
+                    <div className="relative flex h-4 w-4">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-4 w-4 bg-cyan-400"></span>
                     </div>
+                    <span className="text-[#1a2e3b] font-bold tracking-wide text-sm md:text-base">Available for Projects</span>
+                </div>
 
-                    {/* Scroll Indicator */}
-                    <div className="pt-16 animate-bounce">
-                        <svg className="w-6 h-6 text-slate-400 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
-                    </div>
+                {/* Vertical Navigation (Right Side decoration) */}
+                <div className="absolute right-6 top-1/2 -translate-y-1/2 hidden md:flex flex-col items-center gap-4 text-[#1a2e3b]">
+                    <span className="text-sm font-bold -rotate-90 mb-8 tracking-widest">01</span>
+                    <div className="w-[2px] h-8 bg-[#1a2e3b]"></div>
+                    <div className="w-[2px] h-8 bg-[#1a2e3b]/30"></div>
+                    <div className="w-[2px] h-8 bg-[#1a2e3b]/30"></div>
+                </div>
+
+                {/* Bottom Right - Socials */}
+                <div className="absolute bottom-8 right-8 md:bottom-12 md:right-12 flex gap-6 text-[#1a2e3b] z-20">
+                    <a href="#" className="hover:text-white transition-colors duration-300">
+                        {/* X / Twitter */}
+                        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+                        </svg>
+                    </a>
+                    <a href="#" className="hover:text-white transition-colors duration-300">
+                        {/* Mail */}
+                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                    </a>
+                    <a href="#" className="hover:text-white transition-colors duration-300">
+                        {/* LinkedIn */}
+                        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fillRule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clipRule="evenodd"></path>
+                        </svg>
+                    </a>
+                    <a href="#" className="hover:text-white transition-colors duration-300">
+                        {/* Instagram */}
+                        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fillRule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772 4.902 4.902 0 011.772-1.153c.636-.247 1.363-.416 2.427-.465 1.067-.047 1.409-.06 3.809-.06zm0 1.962h-3.21c-2.43 0-2.784.013-3.808.06-1.064.049-1.791.218-2.427.465a4.902 4.902 0 01-1.772 1.153 4.902 4.902 0 01-1.153 1.772c-.247.636-.416 1.363-.465 2.427-.048 1.067-.06 1.407-.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772 4.902 4.902 0 011.772-1.153c.636-.247 1.363-.416 2.427-.465 1.067-.047 1.409-.06 3.809-.06zM12 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm0 1.962a4.2 4.2 0 110 8.4 4.2 4.2 0 010-8.4zm5.136-3.088a1.144 1.144 0 110 2.288 1.144 1.144 0 010-2.288z" clipRule="evenodd"></path>
+                        </svg>
+                    </a>
                 </div>
             </section>
 
-            <AboutPage />
-
-            <ProjectsPage />
-            <ContactSection />
-            <Footer />
+            <div className="bg-white">
+                <AboutPage />
+                <ProjectsPage />
+                <ContactSection />
+                <Footer />
+            </div>
 
         </div>
     );
