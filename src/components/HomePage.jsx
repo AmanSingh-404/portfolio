@@ -4,6 +4,7 @@ import ContactSection from './ContactSection';
 import Navbar from './Navbar';
 import ProjectsPage from './ProjectsPage';
 import AboutPage from './AboutPage';
+import heroImage from '../assets/Screenshot_2026-01-27_135425-removebg-preview.png';
 
 
 const HomePage = () => {
@@ -13,23 +14,23 @@ const HomePage = () => {
             <Navbar />
 
             {/* HERO SECTION */}
-            <section id="home" className="relative h-screen w-full overflow-hidden flex items-center justify-center bg-linear-to-br from-bg-gradient-start to-bg-gradient-end">
+            <section id="home" className="relative h-screen w-full overflow-hidden flex items-end justify-center bg-linear-to-br from-bg-gradient-start to-bg-gradient-end">
 
                 {/* Large Background Text */}
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none z-0">
-                    <h1 className="text-[20vw] leading-none font-black text-white/10 tracking-tighter scale-y-125 font-heading">
-                        ENGINEER
+                    <h1 className="text-[15vw] leading-none font-black text-white/10 tracking-tighter scale-y-125 font-heading">
+                        DEVELOPER
                     </h1>
                 </div>
 
                 {/* Central Image - Cartoon Character */}
-                <div className="relative z-10 mt-20 md:mt-0 animate-fade-in-up delay-300">
-                    <div className="w-[300px] md:w-[450px] h-[400px] md:h-[600px] flex items-end justify-center relative">
+                <div className="relative z-10 animate-fade-in-up delay-300">
+                    <div className="w-auto h-[50vh] md:h-[90vh] flex items-end justify-center relative">
                         {/* Blob Background behind character */}
                         <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-[#1a2e3b]/20 to-transparent rounded-full blur-2xl transform scale-x-150"></div>
 
                         <img
-                            src="https://api.dicebear.com/9.x/avataaars/svg?seed=Felix&backgroundColor=transparent&clothing=hoodie&clothingColor=3c4f76&skinColor=edb98a&top=shortHair&accessories=sunglasses&accessoriesColor=262e33&style=circle"
+                            src={heroImage}
                             alt="Character"
                             className="w-full h-full object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500"
                         />
