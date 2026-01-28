@@ -48,10 +48,10 @@ const AboutPage = () => {
                     </p>
 
                     <div className="flex gap-6">
-                        <div className="flex flex-col">
+                        {/* <div className="flex flex-col">
                             <span className="text-4xl font-black text-slate-900 font-heading">4+</span>
                             <span className="text-sm font-bold text-slate-400 uppercase tracking-widest">Years Exp.</span>
-                        </div>
+                        </div> */}
                         <div className="w-px h-12 bg-slate-200"></div>
                         <div className="flex flex-col">
                             <span className="text-4xl font-black text-slate-900 font-heading">20+</span>

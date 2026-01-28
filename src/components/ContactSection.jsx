@@ -35,11 +35,15 @@ const ContactSection = () => {
                         </a>
 
                         <div className="flex gap-4">
-                            {['LinkedIn', 'GitHub', 'X'].map((social) => (
-                                <a key={social} href="#" className="h-12 px-6 rounded-full border border-slate-200 flex items-center justify-center font-bold text-slate-600 hover:border-cyan-500 hover:text-cyan-600 transition-colors uppercase text-sm tracking-wide">
-                                    {social}
-                                </a>
-                            ))}
+                            <a href="https://www.linkedin.com/in/aman-singh-167968332" target="_blank" rel="noopener noreferrer" className="h-12 px-6 rounded-full border border-slate-200 flex items-center justify-center font-bold text-slate-600 hover:border-cyan-500 hover:text-cyan-600 transition-colors uppercase text-sm tracking-wide">
+                                LinkedIn
+                            </a>
+                            <a href="https://github.com/AmanSingh-404" target="_blank" rel="noopener noreferrer" className="h-12 px-6 rounded-full border border-slate-200 flex items-center justify-center font-bold text-slate-600 hover:border-cyan-500 hover:text-cyan-600 transition-colors uppercase text-sm tracking-wide">
+                                GitHub
+                            </a>
+                            <a href="https://x.com/AmanSingh143669" target="_blank" rel="noopener noreferrer" className="h-12 px-6 rounded-full border border-slate-200 flex items-center justify-center font-bold text-slate-600 hover:border-cyan-500 hover:text-cyan-600 transition-colors uppercase text-sm tracking-wide">
+                                X
+                            </a>
                         </div>
                     </div>
                 </div>

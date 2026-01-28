@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Footer from './Footer';
 import ContactSection from './ContactSection';
 import Navbar from './Navbar';
@@ -9,9 +9,58 @@ import heroImage from '../assets/Screenshot_2026-01-27_135425-removebg-preview.p
 
 const HomePage = () => {
 
+    const [activeSection, setActiveSection] = useState('01');
+
+    useEffect(() => {
+        const sections = ['home', 'about', 'projects', 'contact'];
+        const sectionMap = {
+            home: '01',
+            about: '02',
+            projects: '03',
+            contact: '04'
+        };
+
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.3 // Trigger when 30% of the section is visible
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute('id');
+                    if (sectionMap[id]) {
+                        setActiveSection(sectionMap[id]);
+                    }
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(id => {
+            const element = document.getElementById(id);
+            if (element) observer.observe(element);
+        });
+
+        return () => {
+            sections.forEach(id => {
+                const element = document.getElementById(id);
+                if (element) observer.unobserve(element);
+            });
+        };
+    }, []);
+
     return (
         <div className="min-h-screen font-sans text-gray-900">
             <Navbar />
+
+            {/* Vertical Navigation (Fixed Right Side decoration) */}
+            <div className="fixed right-6 top-1/2 -translate-y-1/2 hidden md:flex flex-col items-center gap-4 text-[#1a2e3b] z-50 mix-blend-difference pointer-events-none">
+                <span className="text-sm font-bold -rotate-90 mb-8 tracking-widest transition-all duration-300">{activeSection}</span>
+                <div className="w-[2px] h-8 bg-[#1a2e3b]"></div>
+                <div className="w-[2px] h-8 bg-[#1a2e3b]/30"></div>
+                <div className="w-[2px] h-8 bg-[#1a2e3b]/30"></div>
+            </div>
 
             {/* HERO SECTION */}
             <section id="home" className="relative h-screen w-full overflow-hidden flex items-end justify-center bg-linear-to-br from-bg-gradient-start to-bg-gradient-end">
@@ -46,38 +95,32 @@ const HomePage = () => {
                     <span className="text-[#1a2e3b] font-bold tracking-wide text-sm md:text-base">Available for Projects</span>
                 </div>
 
-                {/* Vertical Navigation (Right Side decoration) */}
-                <div className="absolute right-6 top-1/2 -translate-y-1/2 hidden md:flex flex-col items-center gap-4 text-[#1a2e3b]">
-                    <span className="text-sm font-bold -rotate-90 mb-8 tracking-widest">01</span>
-                    <div className="w-[2px] h-8 bg-[#1a2e3b]"></div>
-                    <div className="w-[2px] h-8 bg-[#1a2e3b]/30"></div>
-                    <div className="w-[2px] h-8 bg-[#1a2e3b]/30"></div>
-                </div>
+
 
                 {/* Bottom Right - Socials */}
                 <div className="absolute bottom-8 right-8 md:bottom-12 md:right-12 flex gap-6 text-[#1a2e3b] z-20">
-                    <a href="#" className="hover:text-white transition-colors duration-300">
+                    <a href="https://x.com/AmanSingh143669" className="hover:text-white transition-colors duration-300">
                         {/* X / Twitter */}
                         <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                             <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
                         </svg>
                     </a>
-                    <a href="#" className="hover:text-white transition-colors duration-300">
+                    <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox" className="hover:text-white transition-colors duration-300">
                         {/* Mail */}
                         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                         </svg>
                     </a>
-                    <a href="#" className="hover:text-white transition-colors duration-300">
+                    <a href="www.linkedin.com/in/aman-singh-167968332" className="hover:text-white transition-colors duration-300">
                         {/* LinkedIn */}
                         <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                             <path fillRule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clipRule="evenodd"></path>
                         </svg>
                     </a>
-                    <a href="#" className="hover:text-white transition-colors duration-300">
-                        {/* Instagram */}
+                    <a href="https://github.com/AmanSingh-404" className="hover:text-white transition-colors duration-300">
+                        {/* Github */}
                         <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path fillRule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772 4.902 4.902 0 011.772-1.153c.636-.247 1.363-.416 2.427-.465 1.067-.047 1.409-.06 3.809-.06zm0 1.962h-3.21c-2.43 0-2.784.013-3.808.06-1.064.049-1.791.218-2.427.465a4.902 4.902 0 01-1.772 1.153 4.902 4.902 0 01-1.153 1.772c-.247.636-.416 1.363-.465 2.427-.048 1.067-.06 1.407-.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772 4.902 4.902 0 011.772-1.153c.636-.247 1.363-.416 2.427-.465 1.067-.047 1.409-.06 3.809-.06zM12 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm0 1.962a4.2 4.2 0 110 8.4 4.2 4.2 0 010-8.4zm5.136-3.088a1.144 1.144 0 110 2.288 1.144 1.144 0 010-2.288z" clipRule="evenodd"></path>
+                            <path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clipRule="evenodd"></path>
                         </svg>
                     </a>
                 </div>
