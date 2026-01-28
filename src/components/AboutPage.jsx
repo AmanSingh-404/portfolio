@@ -9,7 +9,7 @@ const AboutPage = () => {
         },
         {
             title: "Frameworks & Libraries",
-            skills: ["React", "Next.js", "Node.js", "ASP.NET Core", "Tailwind CSS"]
+            skills: ["React", "Next.js", "Node.js", "Tailwind CSS"]
         },
         {
             title: "Databases & Tools",
@@ -85,7 +85,7 @@ const AboutPage = () => {
                         <div className="flex justify-between items-start">
                             <div>
                                 <p className="font-bold text-slate-800">B.Tech Computer Science</p>
-                                <p className="text-sm text-slate-500">Lloyd Institute of Engineering</p>
+                                <p className="text-sm text-slate-500">Lloyd Institute of Engineering And Technology</p>
                             </div>
                             <span className="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-bold rounded-full">2023-2027</span>
                         </div>

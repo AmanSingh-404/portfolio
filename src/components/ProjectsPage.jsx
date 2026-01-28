@@ -7,19 +7,19 @@ const ProjectsPage = () => {
             title: "AI Agent Builder",
             description: "Developed a comprehensive AI Agent Builder with real-time data visualization.",
             tech: ["React", "Node.js", "Convex", "Tailwind CSS"],
-            liveLink: "#",
-            repoLink: "#"
+            liveLink: "https://make-agent.vercel.app/",
+            repoLink: "https://github.com/AmanSingh-404/Make-Agent"
         },
         {
             id: "02",
             title: "AI Mock Interview",
-            description: "AI Mock Interview platform using Go and Kubernetes for microservices scaling.",
-            tech: ["Go", "Kubernetes", "React", "Docker"],
-            liveLink: "#",
-            repoLink: "#"
+            description: "AI Mock Interview platform ",
+            tech: ["Next.js", "Node.js", "Tailwind CSS", "PostgreSQL","NeonDB"],
+            liveLink: "https://ai-mock-interview-five-lemon.vercel.app/",
+            repoLink: "https://github.com/AmanSingh-404/ai-mock-interview"
         },
         {
-            id: "03",
+            id: "03 (In Working)",
             title: "AI Chatbot",
             description: "Smart chatbot with ML-based recommendation engine for personalized content.",
             tech: ["Python", "TensorFlow", "Flask", "Pandas"],
@@ -27,7 +27,7 @@ const ProjectsPage = () => {
             repoLink: "#"
         },
         {
-            id: "04",
+            id: "04 (In Working)",
             title: "AI Resume Parser",
             description: "ETL pipeline for ingesting and visualizing large datasets with custom dashboards.",
             tech: ["Kafka", "Spark", "AWS", "Python"],
@@ -94,7 +94,7 @@ const ProjectsPage = () => {
                 </div>
 
                 <div className="mt-20 text-center">
-                    <a href="https://github.com" target="_blank" className="inline-flex items-center gap-2 text-slate-400 hover:text-cyan-600 font-bold uppercase tracking-widest text-sm transition-colors cursor-pointer">
+                    <a href="https://github.com/AmanSingh-404" target="_blank" className="inline-flex items-center gap-2 text-slate-400 hover:text-cyan-600 font-bold uppercase tracking-widest text-sm transition-colors cursor-pointer">
                         View All Projects on GitHub
                     </a>
                 </div>
