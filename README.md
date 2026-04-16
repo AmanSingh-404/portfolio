@@ -53,6 +53,3 @@ npm run build
 
 The output will be in the `dist` folder, ready to be deployed to hosting services like Vercel, Netlify, or GitHub Pages.
 
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
