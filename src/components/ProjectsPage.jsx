@@ -5,7 +5,7 @@ const ProjectsPage = () => {
         {
             id: "01",
             title: "AI Agent Builder",
-            description: "Developed a comprehensive AI Agent Builder with real-time data visualization.",
+            description: " Designed and developed an AI Agent Builder platform enabling users to create, configure, and deploy custom AI agents.",
             tech: ["React", "Node.js", "Convex", "Tailwind CSS"],
             liveLink: "https://make-agent.vercel.app/",
             repoLink: "https://github.com/AmanSingh-404/Make-Agent"
@@ -13,18 +13,18 @@ const ProjectsPage = () => {
         {
             id: "02",
             title: "AI Mock Interview",
-            description: "AI Mock Interview platform ",
+            description: "Built a full-stack AI-driven mock interview application where users input job role, description, skill tags, and experience level; Google Gemini AI dynamically generates five tailored interview questions and model answers in JSON format.",
             tech: ["Next.js", "Node.js", "Tailwind CSS", "PostgreSQL","NeonDB"],
             liveLink: "https://ai-mock-interview-five-lemon.vercel.app/",
             repoLink: "https://github.com/AmanSingh-404/ai-mock-interview"
         },
         {
-            id: "03 (In Working)",
-            title: "AI Chatbot",
-            description: "Smart chatbot with ML-based recommendation engine for personalized content.",
-            tech: ["Python", "TensorFlow", "Flask", "Pandas"],
-            liveLink: "#",
-            repoLink: "#"
+            id: "03",
+            title: "AI-Powered Interview Preparation Platform",
+            description: "Developed a full-stack SaaS platform using Google Gemini AI to analyze resumes, self-descriptions, and job descriptions; generated structured reports covering skill gaps, technical questions, behavioral questions,and preparation roadmaps.",
+            tech: ["React.js", "Node.js", "MongoDB", "Google Gemini API"],
+            liveLink: "https://job-you-need.vercel.app/",
+            repoLink: "https://github.com/AmanSingh-404/Job_You_Need"
         },
         {
             id: "04 (In Working)",
