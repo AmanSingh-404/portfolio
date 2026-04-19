@@ -28,9 +28,9 @@ const ProjectsPage = () => {
         },
         {
             id: "04 (In Working)",
-            title: "AI Resume Parser",
-            description: "ETL pipeline for ingesting and visualizing large datasets with custom dashboards.",
-            tech: ["Kafka", "Spark", "AWS", "Python"],
+            title: "Collab AI",
+            description: "CollabAI Docs is a real-time collaborative document workspace powered by a CRDT sync engine that keeps concurrent edits conflict-free across any number of users. It layers contextual AI directly onto your content — summarizing, rewriting, and answering questions with citations drawn from your own workspace.",
+            tech: ["Next.js", "TipTap", "Yjs"," Tailwind CSS","Node.js", "Nastjs", "websocket", "PostgreSQL"],
             liveLink: "#",
             repoLink: "#"
         }
