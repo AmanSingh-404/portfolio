@@ -18,7 +18,7 @@ const AboutPage = () => {
         {
             title: "Cloud & DevOps",
             skills: ["AWS", "Azure", "Docker", "Kubernetes", "CI/CD", "Terraform"]
-        }
+        },
         {
             title: "AI & ML",
             skills: ["Langchain", "Langgraph", "CrewAI", "Autogen", "Agentic AI", "RAG"]
